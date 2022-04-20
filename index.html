@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Яндекс</title>
+  <style>
+    body {      
+      display: grid;
+      height: 100vh;
+      grid-template-rows: auto 1fr auto;
+      margin: 0;
+
+        font-size: 0.8em;
+        line-height: normal;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    header {
+    margin: 10px;
+    text-align: right;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    main {
+        display: grid;
+        place-items: center;
+        font-size: 19px;
+    }
+
+    footer {
+        display: grid;
+        place-items: center;
+    }
+    input{
+        border: 4px solid #ffdb4d;
+        font-size: 30px;
+    }
+
+    .st{
+        appearance: none;
+        border: 0;
+        background-color: #ffdb4d;
+        font-size: 20px;
+        width: 75px;
+        height: 44px;
+        padding: 9px;
+        padding-top: 14px;
+        padding-bottom: 10px;
+        margin-left: -6px;
+    }
+  </style>
+  <script type="text/javascript">
+    function search() {
+      var t = document.getElementById("srch").value;
+      t = "https://yandex.ru/search/?text=" + t;
+      window.location.href = t;
+    }  
+  </script>
+</head>
+
+<body>
+  <header>
+    <a href="https://mail.yandex.ru/">Войти в почту</a>
+ </header>
+ <main> 
+    <div>
+      
+      <input id = "srch" type="text" size="20">
+      
+      <button class="st" onclick="search()">Найти</button>
+    </div>
+  </main>
+  <footer>
+      <img width="120" height="70" src="logo.jpg"/>
+  </footer>
+</body>
+</html>
